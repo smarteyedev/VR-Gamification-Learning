@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class SevilleInfoWindow : EditorWindow
 {
     private Texture2D logo;
@@ -125,3 +126,4 @@ public class SevilleInfoWindow : EditorWindow
         }
     }
 }
+#endif

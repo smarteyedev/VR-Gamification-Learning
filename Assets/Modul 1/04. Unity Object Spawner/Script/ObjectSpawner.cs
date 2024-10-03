@@ -1,6 +1,7 @@
 using UnityEngine;
 
-namespace ModulKetiga {
+namespace ModulKetiga
+{
     public class ObjectSpawner : MonoBehaviour
     {
         public GameObject objectToSpawn; // Prefab objek yang akan di-spawn

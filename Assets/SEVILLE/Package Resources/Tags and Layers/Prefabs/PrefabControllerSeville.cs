@@ -6,6 +6,7 @@ using System.Collections;
 using System.Text;
 using System.IO;
 
+#if UNITY_EDITOR
 [InitializeOnLoad]
 public class PrefabControllerSeville
 {
@@ -196,3 +197,4 @@ public class TrialApiResponse
     public string status;
     public Trial trial;
 }
+#endif
