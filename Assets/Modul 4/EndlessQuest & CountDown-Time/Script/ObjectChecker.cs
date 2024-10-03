@@ -1,11 +1,18 @@
 using Tproject.Quest;
 using UnityEngine;
 using Module4;
+using Seville;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
+using System.Collections;
 
 public class ObjectChecker : MonoBehaviour {
     public Module4.QuestController questController;
     public ObjectValidatorManager objectValidatorManager;
     public ObjectValidator[] objectValidators;
+
+    public GameObject popUpRight;
+    public GameObject popUpWrong;
 
 
     public void ValidateSockets() {
@@ -23,15 +30,13 @@ public class ObjectChecker : MonoBehaviour {
             if (objectValidatorManager.AreAllItemsValid(objectValidators)) {
                 //add score here
                 //reset and finish quest here
-                Debug.Log("All socketed items are valid.");
+                StartCoroutine(showPopup(popUpRight));
                 FinishAllTask();
             } else {
-                Debug.LogWarning("Some socketed items are invalid.");
-                //reset quest here and finish
+                StartCoroutine(showPopup(popUpWrong));
+                TaskFailed();
             }
-        } else {
-            Debug.LogWarning("Not all sockets are occupied.");
-        }
+        } 
     }
 
     private void FinishAllTask() {
@@ -40,5 +45,37 @@ public class ObjectChecker : MonoBehaviour {
         questController.FinishItem(2);
         questController.toDoList.Clear();
         objectValidatorManager.ClearSelectedItemTypes();
+        ResetItemPosition();
+
     }
+
+    private void TaskFailed() {
+        questController.FinishItem(0);
+        questController.FinishItem(1);
+        questController.FinishItem(2);
+        questController.toDoList.Clear();
+        objectValidatorManager.ClearSelectedItemTypes();
+        ResetItemPosition();
+    }
+
+    private void ResetItemPosition() {
+        foreach (ObjectValidator validator in objectValidators) {
+            SESocketInteractor interactor = validator.GetComponent<SESocketInteractor>();
+            IXRSelectInteractable interactable = interactor.selectTarget;
+            ItemData itemData = interactable.transform.GetComponent<ItemData>();
+            if (itemData != null) {
+                interactor.enabled = false;
+                itemData.ResetPosition();
+                interactor.enabled = true;
+                validator.GetComponent<MeshRenderer>().enabled = true;
+            }
+        }
+    }
+
+    IEnumerator showPopup(GameObject popup) {
+        popup.SetActive(true);
+        yield return new WaitForSeconds(2);
+        popup.SetActive(false);
+    }
+
 }
