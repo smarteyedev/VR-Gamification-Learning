@@ -11,6 +11,7 @@ public class ObjectChecker : MonoBehaviour {
     public ObjectValidatorManager objectValidatorManager;
     public ObjectValidator[] objectValidators;
 
+
     public GameObject popUpRight;
     public GameObject popUpWrong;
 

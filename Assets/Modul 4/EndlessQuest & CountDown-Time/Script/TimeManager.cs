@@ -2,26 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace Module4 {
-    public class TimeManager : MonoBehaviour {
+namespace Module4
+{
+    public class TimeManager : MonoBehaviour
+    {
         [SerializeField] private float timer = 60;
         [SerializeField] private TextMeshProUGUI timerText;
 
         bool isTracking = false;
+        public UnityEvent onTimerFinish;
+        private bool isTimerFinished = false;
 
-        private void Update() {
-            if (isTracking) {
+        private void Update()
+        {
+            if (isTracking)
+            {
                 timer -= Time.deltaTime;
-                if (timer <= 0) {
-                    //do somthng
+                if (timer <= 0 && !isTimerFinished)
+                {
+                    isTimerFinished = true;
+                    onTimerFinish.Invoke();
                     isTracking = false;
                 }
             }
             timerText.text = timer.ToString("F2");
         }
 
-        public void StartTimer() {
+        public void StartTimer()
+        {
             isTracking = true;
         }
     }
