@@ -8,7 +8,8 @@ namespace Module4
 {
     public class TimeManager : MonoBehaviour
     {
-        [SerializeField] private float timer = 60;
+        [SerializeField] private float initialTime = 60f;
+        private float timer = 60;
         [SerializeField] private TextMeshProUGUI timerText;
 
         bool isTracking = false;
@@ -32,6 +33,7 @@ namespace Module4
 
         public void StartTimer()
         {
+            timer = initialTime;
             isTracking = true;
         }
     }

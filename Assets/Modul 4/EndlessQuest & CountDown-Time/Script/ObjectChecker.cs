@@ -11,7 +11,6 @@ public class ObjectChecker : MonoBehaviour {
     public ObjectValidatorManager objectValidatorManager;
     public ObjectValidator[] objectValidators;
 
-
     public GameObject popUpRight;
     public GameObject popUpWrong;
 
@@ -30,6 +29,8 @@ public class ObjectChecker : MonoBehaviour {
         if (allSocketsOccupied) {
             if (objectValidatorManager.AreAllItemsValid(objectValidators)) {
                 //add score here
+
+
                 //reset and finish quest here
                 StartCoroutine(showPopup(popUpRight));
                 FinishAllTask();
@@ -47,7 +48,6 @@ public class ObjectChecker : MonoBehaviour {
         questController.toDoList.Clear();
         objectValidatorManager.ClearSelectedItemTypes();
         ResetItemPosition();
-
     }
 
     private void TaskFailed() {
