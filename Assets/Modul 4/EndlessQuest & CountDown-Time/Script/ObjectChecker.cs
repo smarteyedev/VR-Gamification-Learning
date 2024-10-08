@@ -6,7 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
 using System.Collections;
 
-public class ObjectChecker : MonoBehaviour {
+public class ObjectChecker : MonoBehaviour
+{
     public Module4.QuestController questController;
     public ObjectValidatorManager objectValidatorManager;
     public ObjectValidator[] objectValidators;
@@ -15,33 +16,40 @@ public class ObjectChecker : MonoBehaviour {
     public GameObject popUpWrong;
 
 
-    public void ValidateSockets() {
-        bool allSocketsOccupied = true; 
-        foreach (ObjectValidator validator in objectValidators) {
+    public void ValidateSockets()
+    {
+        bool allSocketsOccupied = true;
+        foreach (ObjectValidator validator in objectValidators)
+        {
             if (!validator.socketOccupied)
             {
-                allSocketsOccupied = false; 
-                break; 
+                allSocketsOccupied = false;
+                break;
             }
         }
 
         // If all sockets are occupied, validate the items
-        if (allSocketsOccupied) {
-            if (objectValidatorManager.AreAllItemsValid(objectValidators)) {
+        if (allSocketsOccupied)
+        {
+            if (objectValidatorManager.AreAllItemsValid(objectValidators))
+            {
                 //add score here
 
 
                 //reset and finish quest here
                 StartCoroutine(showPopup(popUpRight));
                 FinishAllTask();
-            } else {
+            }
+            else
+            {
                 StartCoroutine(showPopup(popUpWrong));
                 TaskFailed();
             }
-        } 
+        }
     }
 
-    private void FinishAllTask() {
+    private void FinishAllTask()
+    {
         questController.FinishItem(0);
         questController.FinishItem(1);
         questController.FinishItem(2);
@@ -50,7 +58,8 @@ public class ObjectChecker : MonoBehaviour {
         ResetItemPosition();
     }
 
-    private void TaskFailed() {
+    public void TaskFailed()
+    {
         questController.FinishItem(0);
         questController.FinishItem(1);
         questController.FinishItem(2);
@@ -59,12 +68,17 @@ public class ObjectChecker : MonoBehaviour {
         ResetItemPosition();
     }
 
-    private void ResetItemPosition() {
-        foreach (ObjectValidator validator in objectValidators) {
+    public void ResetItemPosition()
+    {
+        foreach (ObjectValidator validator in objectValidators)
+        {
             SESocketInteractor interactor = validator.GetComponent<SESocketInteractor>();
             IXRSelectInteractable interactable = interactor.selectTarget;
-            ItemData itemData = interactable.transform.GetComponent<ItemData>();
-            if (itemData != null) {
+
+            ItemData itemData = interactable != null ? interactable.transform.GetComponent<ItemData>() : null;
+
+            if (itemData != null)
+            {
                 interactor.enabled = false;
                 itemData.ResetPosition();
                 interactor.enabled = true;
@@ -73,7 +87,8 @@ public class ObjectChecker : MonoBehaviour {
         }
     }
 
-    IEnumerator showPopup(GameObject popup) {
+    IEnumerator showPopup(GameObject popup)
+    {
         popup.SetActive(true);
         yield return new WaitForSeconds(2);
         popup.SetActive(false);

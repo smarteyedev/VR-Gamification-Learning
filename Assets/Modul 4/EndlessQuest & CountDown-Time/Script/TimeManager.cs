@@ -35,6 +35,7 @@ namespace Module4
         {
             timer = initialTime;
             isTracking = true;
+            isTimerFinished = false; //! reset checker timer event
         }
     }
 }
