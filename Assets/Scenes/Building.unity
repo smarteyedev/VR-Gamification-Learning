@@ -1667,9 +1667,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480617718}
     m_Modifications:
+    - target: {fileID: 1379228910807570, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_Name
       value: P_Ceilinglamp01_on (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4453338879422136, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5414,7 +5422,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &480617718
 Transform:
@@ -5448,7 +5456,7 @@ GameObject:
   m_Layer: 0
   m_Name: Start Transform
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5461,7 +5469,7 @@ Transform:
   m_GameObject: {fileID: 489534655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.64, y: 0, z: 8.86}
+  m_LocalPosition: {x: 0.64, y: 0.265, z: 8.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7235,7 +7243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &542230251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8688,7 +8696,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -9830,7 +9838,7 @@ GameObject:
   m_Layer: 0
   m_Name: Target Transform
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9843,7 +9851,7 @@ Transform:
   m_GameObject: {fileID: 866346324}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 0, z: 0.915}
+  m_LocalPosition: {x: 0.56, y: 0.316, z: 0.915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11438,7 +11446,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -12194,7 +12202,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 33
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
   m_HitClosestOnly: 0
@@ -13430,7 +13438,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13758,7 +13766,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -15472,9 +15480,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480617718}
     m_Modifications:
+    - target: {fileID: 1379228910807570, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_Name
       value: P_Ceilinglamp01_on (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4453338879422136, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19557,9 +19573,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480617718}
     m_Modifications:
+    - target: {fileID: 1379228910807570, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_Name
       value: P_Ceilinglamp01_on (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4453338879422136, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19659,9 +19683,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2061211877}
     m_Modifications:
+    - target: {fileID: 1541509308195600, guid: 0456d61d35c4d474d9456f07330d011b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1856550628269874, guid: 0456d61d35c4d474d9456f07330d011b, type: 3}
       propertyPath: m_Name
       value: P_Computer_sys
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856550628269874, guid: 0456d61d35c4d474d9456f07330d011b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4108997314574104, guid: 0456d61d35c4d474d9456f07330d011b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19711,6 +19743,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23481624232126274, guid: 0456d61d35c4d474d9456f07330d011b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f34beaad625a5d4da1aeab1f2234bba, type: 2}
     - target: {fileID: 64126502897848454, guid: 0456d61d35c4d474d9456f07330d011b,
         type: 3}
       propertyPath: m_Enabled
@@ -20189,7 +20226,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -20314,9 +20351,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480617718}
     m_Modifications:
+    - target: {fileID: 1379228910807570, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_Name
       value: P_Ceilinglamp01_on
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4453338879422136, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24306,9 +24351,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480617718}
     m_Modifications:
+    - target: {fileID: 1379228910807570, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_Name
       value: P_Ceilinglamp01_on (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528608911932082, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4453338879422136, guid: 14685f57ca0a9ad4c8939b048a2c892f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26380,6 +26433,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2061211877}
     m_Modifications:
+    - target: {fileID: 769397457637915863, guid: 5eb8a945af4d535469a0832fe25a3e01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1175078258232690823, guid: 5eb8a945af4d535469a0832fe25a3e01,
         type: 3}
       propertyPath: m_RootOrder
@@ -26445,10 +26503,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1947076624328348221, guid: 5eb8a945af4d535469a0832fe25a3e01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3792346658501645263, guid: 5eb8a945af4d535469a0832fe25a3e01,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9204452290008270527, guid: 5eb8a945af4d535469a0832fe25a3e01,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27193,7 +27261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f34beaad625a5d4da1aeab1f2234bba, type: 2}
+  - {fileID: 2100000, guid: 69687451aedd8764c9c9530dea16505f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
